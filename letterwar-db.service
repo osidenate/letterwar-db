@@ -1,0 +1,12 @@
+[Unit]
+Description=LetterwarDB
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start letterwar-db
+ExecStop=/usr/bin/docker stop letterwar-db
+
+[Install]
+WantedBy=multi-user.target
