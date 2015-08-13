@@ -6,6 +6,11 @@ The easiest way to setup a Letterwar Database server is to run the image with Do
 
 `sudo docker run --net="host" --name="letterwar-db" -d osidenate/letterwar-db`
 
+## Populating Database with Words
+After you setup a new database, you will want to populate it with the word list.
+
+`mongo insert-words.js`
+
 ## Systemd configuration
 
 If you want ``letterwar-db`` to automatically start up with the server, you can add ``letterwar-db.service`` to systemd.
